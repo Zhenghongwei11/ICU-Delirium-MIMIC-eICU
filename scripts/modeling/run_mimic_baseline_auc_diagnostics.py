@@ -29,6 +29,21 @@ def zscore(values: pd.Series) -> pd.Series:
     return (x - x.mean()) / std
 
 
+def zscore_from_train(train_values: pd.Series, values: pd.Series) -> pd.Series:
+    train_x = pd.to_numeric(train_values, errors="coerce")
+    x = pd.to_numeric(values, errors="coerce")
+    std = train_x.std(ddof=0)
+    if not std or np.isnan(std):
+        return x * 0
+    return (x - train_x.mean()) / std
+
+
+def add_age_z(data: pd.DataFrame, reference: pd.DataFrame) -> pd.DataFrame:
+    out = data.copy()
+    out["age_z"] = zscore_from_train(reference["anchor_age"], data["anchor_age"])
+    return out
+
+
 def fmt(value: float, digits: int = 3) -> str:
     if pd.isna(value):
         return ""
@@ -47,8 +62,10 @@ def fold_auc_rows(data: pd.DataFrame, folds: int) -> tuple[list[dict[str, object
     oof = np.full(len(data), np.nan, dtype=float)
     rows: list[dict[str, object]] = []
     for fold, (train_idx, test_idx) in enumerate(splitter.split(data, y), start=1):
-        train = data.iloc[train_idx]
-        test = data.iloc[test_idx]
+        train_raw = data.iloc[train_idx]
+        test_raw = data.iloc[test_idx]
+        train = add_age_z(train_raw, train_raw)
+        test = add_age_z(test_raw, train_raw)
         result = fit_demographic(train)
         pred = result.predict(sm.add_constant(test[["age_z", "male"]], has_constant="add"))
         oof[test_idx] = pred

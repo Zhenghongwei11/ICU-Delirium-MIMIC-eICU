@@ -14,6 +14,18 @@ from sklearn.model_selection import StratifiedKFold
 DATASET_ID = "MIMIC-IV-2.2"
 OUTCOME = "incident_post_landmark_delirium"
 RANDOM_STATE = 20260608
+STANDARDIZED_FEATURES = {
+    "age_z": "anchor_age",
+    "night_all_z": "event_all_night_22_06_count_48h",
+    "day_all_z": "event_all_day_06_22_count_48h",
+    "total_all_z": "event_all_total_count_48h",
+    "night_fraction_z": "event_all_night_fraction_48h",
+    "braden_skin_records_z": "nursing_skin_braden_pressure_n_records_48h",
+    "rass_records_z": "nursing_rass_sedation_n_records_48h",
+    "mobility_records_z": "nursing_mobility_turning_n_records_48h",
+    "pain_records_z": "nursing_pain_n_records_48h",
+    "restraint_records_z": "nursing_restraints_n_records_48h",
+}
 
 
 def read_tsv(path: Path) -> pd.DataFrame:
@@ -30,6 +42,15 @@ def zscore(values: pd.Series) -> pd.Series:
     return (x - x.mean()) / std
 
 
+def zscore_from_train(train_values: pd.Series, values: pd.Series) -> pd.Series:
+    train_x = pd.to_numeric(train_values, errors="coerce")
+    x = pd.to_numeric(values, errors="coerce")
+    std = train_x.std(ddof=0)
+    if not std or np.isnan(std):
+        return x * 0
+    return (x - train_x.mean()) / std
+
+
 def prepare_data(matrix_path: Path, classes_path: Path) -> pd.DataFrame:
     matrix = read_tsv(matrix_path)
     classes = read_tsv(classes_path)
@@ -41,19 +62,23 @@ def prepare_data(matrix_path: Path, classes_path: Path) -> pd.DataFrame:
     data = data[data["pre_landmark_delirium_positive"] == False].copy()
     data[OUTCOME] = data[OUTCOME].astype(int)
 
-    data["age_z"] = zscore(data["anchor_age"])
     data["male"] = (data["gender"].astype(str).str.upper() == "M").astype(int)
-    data["night_all_z"] = zscore(data["event_all_night_22_06_count_48h"])
-    data["day_all_z"] = zscore(data["event_all_day_06_22_count_48h"])
-    data["total_all_z"] = zscore(data["event_all_total_count_48h"])
-    data["night_fraction_z"] = zscore(data["event_all_night_fraction_48h"])
-    data["braden_skin_records_z"] = zscore(data.get("nursing_skin_braden_pressure_n_records_48h", 0))
-    data["rass_records_z"] = zscore(data.get("nursing_rass_sedation_n_records_48h", 0))
-    data["mobility_records_z"] = zscore(data.get("nursing_mobility_turning_n_records_48h", 0))
-    data["pain_records_z"] = zscore(data.get("nursing_pain_n_records_48h", 0))
-    data["restraint_records_z"] = zscore(data.get("nursing_restraints_n_records_48h", 0))
+    data = apply_standardization(data, data)
     data["high_intensity_class"] = data["class_label"].str.contains("high care intensity", na=False).astype(int)
     return data
+
+
+def raw_feature(data: pd.DataFrame, col: str) -> pd.Series:
+    if col in data.columns:
+        return data[col]
+    return pd.Series(0, index=data.index)
+
+
+def apply_standardization(data: pd.DataFrame, reference: pd.DataFrame) -> pd.DataFrame:
+    out = data.copy()
+    for z_col, raw_col in STANDARDIZED_FEATURES.items():
+        out[z_col] = zscore_from_train(raw_feature(reference, raw_col), raw_feature(data, raw_col))
+    return out
 
 
 def model_specs() -> dict[str, list[str]]:
@@ -173,8 +198,10 @@ def cross_validated_predictions(data: pd.DataFrame, folds: int) -> tuple[list[di
     for model, predictors in model_specs().items():
         oof = np.full(len(data), np.nan, dtype=float)
         for train_idx, test_idx in splitter.split(data, y):
-            train = data.iloc[train_idx]
-            test = data.iloc[test_idx]
+            train_raw = data.iloc[train_idx]
+            test_raw = data.iloc[test_idx]
+            train = apply_standardization(train_raw, train_raw)
+            test = apply_standardization(test_raw, train_raw)
             oof[test_idx] = fit_predict(train, test, predictors)
         preds[model] = oof
         rows.append(
@@ -183,7 +210,7 @@ def cross_validated_predictions(data: pd.DataFrame, folds: int) -> tuple[list[di
                 oof,
                 model,
                 f"MIMIC_internal_{folds}fold_cv",
-                "Outcome-model internal cross-validation; unsupervised phenotype assignments were fixed from the derivation cohort.",
+                "Outcome-model internal cross-validation with continuous predictors standardized within each training fold and applied to the held-out fold; unsupervised phenotype assignments were fixed from the derivation cohort.",
             )
         )
     return rows, preds
