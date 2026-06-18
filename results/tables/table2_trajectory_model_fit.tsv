@@ -1,0 +1,29 @@
+dataset_id	model_family	number_of_classes	aic	bic	entropy_proxy_mean_max_posterior	silhouette	min_class_proportion	selection_flag	table_section	feature_set	algorithm	n_features	inertia	mean_assignment_confidence_proxy	selection_eligible
+MIMIC-IV-2.2	GaussianMixture_diag	2	595596.4627478467	596517.8301134111	0.9999999521866412	0.1653353668058761	0.4995183559884405	True	primary_dynamic_phenotype						
+MIMIC-IV-2.2	GaussianMixture_diag	3	496549.41074349405	497935.0329831799	0.9996947327200052	0.1718233455352575	0.0040672160976131	False	primary_dynamic_phenotype						
+MIMIC-IV-2.2	GaussianMixture_diag	4	429057.022134203	430906.8992480104	0.9995089655406044	0.1883418185550442	0.0040672160976131	False	primary_dynamic_phenotype						
+MIMIC-IV-2.2	GaussianMixture_diag	5	400964.0735533161	403278.20554124506	0.9906606016948474	0.1283434434081538	0.0040672160976131	False	primary_dynamic_phenotype						
+MIMIC-IV-2.2		2	328621.51867819927	329228.62120589666		0.1778585180229446	0.4995183559884405	False	sensitivity_trajectory_models	nursing_vulnerability_only	GaussianMixture_diag	21.0		0.9999999999501714	True
+MIMIC-IV-2.2		3	260692.92105976288	261607.1460426484		0.2172173014452153	0.1773520282564487	True	sensitivity_trajectory_models	nursing_vulnerability_only	GaussianMixture_diag	21.0		0.999984198797126	True
+MIMIC-IV-2.2		4	216779.41151970287	218000.75895777647		0.2231897881164211	0.0040672160976131	False	sensitivity_trajectory_models	nursing_vulnerability_only	GaussianMixture_diag	21.0		0.9999489010517136	False
+MIMIC-IV-2.2		5	189280.78992112435	190809.25981438605		0.1632387617109711	0.0040672160976131	False	sensitivity_trajectory_models	nursing_vulnerability_only	GaussianMixture_diag	21.0		0.9997890561702216	False
+MIMIC-IV-2.2		2				0.2126726047475133	0.4562774269506582	True	sensitivity_trajectory_models	nursing_vulnerability_only	KMeans	21.0	157532.68248112628	0.234876154718384	True
+MIMIC-IV-2.2		3				0.2155375880274933	0.0039601840950444	False	sensitivity_trajectory_models	nursing_vulnerability_only	KMeans	21.0	122993.74941229729	0.2365271266788031	False
+MIMIC-IV-2.2		4				0.2485938858042815	0.0039601840950444	False	sensitivity_trajectory_models	nursing_vulnerability_only	KMeans	21.0	102787.10849593028	0.2532074512954583	False
+MIMIC-IV-2.2		5				0.2013057660198436	0.0039601840950444	False	sensitivity_trajectory_models	nursing_vulnerability_only	KMeans	21.0	92977.03129917898	0.2655949672372757	False
+MIMIC-IV-2.2		2	231745.57429534296	232066.98151588865		0.7270865930891337	0.0155196403724713	False	sensitivity_trajectory_models	care_process_day_night_only	GaussianMixture_diag	11.0		0.9976964747623044	False
+MIMIC-IV-2.2		3	182205.0787553608	182690.7607775187		0.3056196923475371	0.0157337043776089	False	sensitivity_trajectory_models	care_process_day_night_only	GaussianMixture_diag	11.0		0.980432402880766	False
+MIMIC-IV-2.2		4	162231.0498670633	162881.00669083346		0.1896694736971208	0.0148774483570587	False	sensitivity_trajectory_models	care_process_day_night_only	GaussianMixture_diag	11.0		0.9663444524499404	False
+MIMIC-IV-2.2		5	150398.11854804488	151212.3501734273		0.1447148025682361	0.0132719683185272	False	sensitivity_trajectory_models	care_process_day_night_only	GaussianMixture_diag	11.0		0.9593343323641084	False
+MIMIC-IV-2.2		2				0.9087257959635914	0.0040672160976131	False	sensitivity_trajectory_models	care_process_day_night_only	KMeans	11.0	65526.60263081428	0.3362992922470845	False
+MIMIC-IV-2.2		3				0.3196439918735969	0.0039601840950444	False	sensitivity_trajectory_models	care_process_day_night_only	KMeans	11.0	43599.92523583149	0.3855203804161308	False
+MIMIC-IV-2.2		4				0.2762180792334884	0.0040672160976131	False	sensitivity_trajectory_models	care_process_day_night_only	KMeans	11.0	36477.16767078012	0.4068880159397946	False
+MIMIC-IV-2.2		5				0.250937332912994	0.0039601840950444	False	sensitivity_trajectory_models	care_process_day_night_only	KMeans	11.0	31541.668860891023	0.4256030750376515	False
+MIMIC-IV-2.2		2	595596.4627478467	596517.8301134111		0.1638700571481781	0.4995183559884405	True	sensitivity_trajectory_models	joint_nursing_care_process	GaussianMixture_diag	32.0		0.9999999521866412	True
+MIMIC-IV-2.2		3	496549.41074349405	497935.0329831799		0.1693868378572442	0.0040672160976131	False	sensitivity_trajectory_models	joint_nursing_care_process	GaussianMixture_diag	32.0		0.9996947327200052	False
+MIMIC-IV-2.2		4	429057.022134203	430906.8992480104		0.1910196629637362	0.0040672160976131	False	sensitivity_trajectory_models	joint_nursing_care_process	GaussianMixture_diag	32.0		0.9995089655406044	False
+MIMIC-IV-2.2		5	400964.0735533161	403278.20554124506		0.1306441268534082	0.0040672160976131	False	sensitivity_trajectory_models	joint_nursing_care_process	GaussianMixture_diag	32.0		0.9906606016948474	False
+MIMIC-IV-2.2		2				0.8651576906605462	0.0039601840950444	False	sensitivity_trajectory_models	joint_nursing_care_process	KMeans	32.0	224433.2549277585	0.1850009417844165	False
+MIMIC-IV-2.2		3				0.2222235903857507	0.0039601840950444	False	sensitivity_trajectory_models	joint_nursing_care_process	KMeans	32.0	170279.35473994684	0.2083343381792128	False
+MIMIC-IV-2.2		4				0.2206969547814961	0.0039601840950444	False	sensitivity_trajectory_models	joint_nursing_care_process	KMeans	32.0	151884.6306640549	0.2189353944717167	False
+MIMIC-IV-2.2		5				0.1659072943018839	0.0039601840950444	False	sensitivity_trajectory_models	joint_nursing_care_process	KMeans	32.0	139126.92916592275	0.228207978981622	False

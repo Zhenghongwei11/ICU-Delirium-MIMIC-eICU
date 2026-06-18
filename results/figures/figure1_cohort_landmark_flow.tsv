@@ -1,0 +1,9 @@
+panel	display_order	dataset_id	label	n	n_removed	note
+cohort_flow	1	MIMIC-IV-2.2	all_icu_stays	73181	0	none
+cohort_flow	2	MIMIC-IV-2.2	age_ge_65	36964	36217	anchor_age_lt_65_or_missing
+cohort_flow	3	MIMIC-IV-2.2	first_icu_stay_per_subject	26269	10695	subsequent_icu_stay
+cohort_flow	4	MIMIC-IV-2.2	landmark_48h_eligible	12716	13553	icu_los_lt_48h
+landmark_eligibility	34	MIMIC-IV-2.2	24h landmark eligible	21147	5122	death_before_landmark=700
+landmark_eligibility	58	MIMIC-IV-2.2	48h landmark eligible	12716	13553	death_before_landmark=1160
+landmark_eligibility	82	MIMIC-IV-2.2	72h landmark eligible	8327	17942	death_before_landmark=1466
+study_timeline	100	MIMIC-IV-2.2	0-48h exposure window; post-48h incident delirium outcome window			Primary landmark design uses only exposure data before 48h and outcomes after 48h.

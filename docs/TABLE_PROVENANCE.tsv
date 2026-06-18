@@ -1,0 +1,4 @@
+table	public_output	generating_script	upstream_inputs
+Table 1	results/tables/table1_baseline_characteristics.tsv	scripts/modeling/build_publication_tables.py	results/phenotypes/mimic_feature_matrix_48h.tsv; results/phenotypes/trajectory_classes.tsv; results/covariates/mimic_clinical_covariates_48h.tsv
+Table 2	results/tables/table2_key_analytical_evidence.tsv	scripts/modeling/build_publication_tables.py	results/effect_sizes/*.tsv; results/sensitivity/*.tsv; results/benchmarks/prediction_eval_ci.tsv
+Supplementary Tables S1-S14	results/tables/*.tsv and selected results subdirectories	scripts/modeling/*.py	See scripts/reproduce_one_click.sh for exact execution order.

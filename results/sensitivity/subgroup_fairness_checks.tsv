@@ -1,0 +1,21 @@
+dataset_id	analysis_type	subgroup_name	subgroup_level	model	effect_type	effect	ci_lower	ci_upper	pvalue	auc_or_cstat	brier	n	events	status
+MIMIC-IV-2.2	association	sex	female	clinical_covariate_extended_within_subgroup	odds_ratio	1.5829248423067015	1.0551713742044506	2.3746389616386616	0.026450623226403132	0.746229054206028	0.04391089073865178	4312	208	ok
+MIMIC-IV-2.2	screening_score_performance	sex	female	joint_density_rank_score	auc_or_cstat	0.6898698736692158				0.6898698736692158	0.2730118716407631	4312	208	score_auc_only
+MIMIC-IV-2.2	association	sex	male	clinical_covariate_extended_within_subgroup	odds_ratio	1.9029672736938352	1.2778759787999077	2.8338309075584993	0.0015409343421892542	0.7428309233117298	0.04277011186786672	5028	237	ok
+MIMIC-IV-2.2	screening_score_performance	sex	male	joint_density_rank_score	auc_or_cstat	0.7212514236325647				0.7212514236325647	0.2712901842797848	5031	237	score_auc_only
+MIMIC-IV-2.2	association	age_group	age_65_79	clinical_covariate_extended_within_subgroup	odds_ratio	1.677422225092082	1.1557856097136712	2.43448724191153	0.006491914892961812	0.7529302469135802	0.044056794066020984	5913	288	ok
+MIMIC-IV-2.2	screening_score_performance	age_group	age_65_79	joint_density_rank_score	auc_or_cstat	0.714946913580247				0.714946913580247	0.2710193965255244	5913	288	score_auc_only
+MIMIC-IV-2.2	association	age_group	age_ge_80	clinical_covariate_extended_within_subgroup	odds_ratio	1.7730811046940396	1.1468842812707587	2.7411803049036974	0.0099789319475275	0.7437971133056741	0.04184184307648144	3427	157	ok
+MIMIC-IV-2.2	screening_score_performance	age_group	age_ge_80	joint_density_rank_score	auc_or_cstat	0.6909105769848267				0.6909105769848267	0.27411878938805434	3430	157	score_auc_only
+MIMIC-IV-2.2	association	race_group	Asian	clinical_covariate_extended_within_subgroup	odds_ratio	1.563268857093088	0.17224876931861366	14.187674775410104	0.6913454288590691	0.7799479166666666	0.03014797579588247	265	9	ok
+MIMIC-IV-2.2	screening_score_performance	race_group	Asian	joint_density_rank_score	auc_or_cstat	0.53125				0.53125	0.28664866124202487	265	9	score_auc_only
+MIMIC-IV-2.2	association	race_group	Black	clinical_covariate_extended_within_subgroup	odds_ratio	2.6330032884678634	0.9398339615304032	7.376522450618328	0.06548382899414755	0.8156074014481094	0.04673476535000816	598	33	ok
+MIMIC-IV-2.2	screening_score_performance	race_group	Black	joint_density_rank_score	auc_or_cstat	0.6654888103651355				0.6654888103651355	0.27345234439625343	599	33	score_auc_only
+MIMIC-IV-2.2	association	race_group	Other/Unknown	clinical_covariate_extended_within_subgroup	odds_ratio	2.0270048695499616	1.0963064901672461	3.7478102866584773	0.024245378840807696	0.7257318952234206	0.06747100622251652	1526	118	ok
+MIMIC-IV-2.2	screening_score_performance	race_group	Other/Unknown	joint_density_rank_score	auc_or_cstat	0.7139274157654786				0.7139274157654786	0.2619964782656711	1527	118	score_auc_only
+MIMIC-IV-2.2	association	race_group	White	clinical_covariate_extended_within_subgroup	odds_ratio	1.5616181321459113	1.0985028556244838	2.2199771062593596	0.013011429360377677	0.7550459478334127	0.037517310113311185	6768	278	ok
+MIMIC-IV-2.2	screening_score_performance	race_group	White	joint_density_rank_score	auc_or_cstat	0.7060197758588198				0.7060197758588198	0.2744425216162975	6768	278	score_auc_only
+MIMIC-IV-2.2	association	sedative_exposure	no_sedative_exposure	clinical_covariate_extended_within_subgroup	odds_ratio	1.3967541928215563	0.9555246475777701	2.04172888696292	0.0845051079263546	0.7514064054107817	0.03244156858278483	4735	165	ok
+MIMIC-IV-2.2	screening_score_performance	sedative_exposure	no_sedative_exposure	joint_density_rank_score	auc_or_cstat	0.6608220848325812				0.6608220848325812	0.27683119006341583	4738	165	score_auc_only
+MIMIC-IV-2.2	association	sedative_exposure	sedative_exposed	clinical_covariate_extended_within_subgroup	odds_ratio	2.3672162166901116	1.4214809041267553	3.942165244916266	0.0009276825275295559	0.7241337737407102	0.05434978514762166	4605	280	ok
+MIMIC-IV-2.2	screening_score_performance	sedative_exposure	sedative_exposed	joint_density_rank_score	auc_or_cstat	0.7228208092485551				0.7228208092485551	0.26709137977071623	4605	280	score_auc_only

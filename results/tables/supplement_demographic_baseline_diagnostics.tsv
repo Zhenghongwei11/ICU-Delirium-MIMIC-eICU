@@ -1,0 +1,18 @@
+section	metric	estimate	interval_or_detail	n	events	interpretation
+Discrimination diagnostic	Apparent demographics-only AUC	0.513	Derivation apparent performance, not external validation	9343	445	Age and sex showed only near-null apparent separation in the 48-hour landmark cohort.
+Discrimination diagnostic	Internal 5-fold CV demographics-only AUC	0.487	95% CI 0.460-0.514	9343	445	The confidence interval crossed 0.5; the value below 0.5 reflects weak out-of-sample signal rather than evidence of a usable reverse predictor.
+Coefficient diagnostic	Age, per SD, demographics-only apparent model	OR 1.04	p=0.438	9343	445	The age coefficient was positive but small and statistically weak after landmark selection.
+Coefficient diagnostic	Male sex, demographics-only apparent model	OR 0.98	p=0.865	9343	445	Sex alone did not materially separate later documented delirium in this cohort.
+Correlation diagnostic	Pearson correlation between age and documented incident delirium	0.008		9343	445	The age-outcome association was minimal after selecting patients who reached the 48-hour landmark without pre-landmark documented delirium.
+Directionality diagnostic	AUC after reversing internal CV predictions	0.513		9343	445	The reversed-score AUC is the complement of the near-null CV AUC and does not indicate a prespecified reverse clinical predictor.
+Fold diagnostic	Fold 1 demographics-only AUC	0.527	events 89; n 1869	1869	89	Fold-level AUC varied around the null because age and sex carried little signal in this landmark-selected cohort.
+Fold diagnostic	Fold 2 demographics-only AUC	0.468	events 89; n 1869	1869	89	Fold-level AUC varied around the null because age and sex carried little signal in this landmark-selected cohort.
+Fold diagnostic	Fold 3 demographics-only AUC	0.531	events 89; n 1869	1869	89	Fold-level AUC varied around the null because age and sex carried little signal in this landmark-selected cohort.
+Fold diagnostic	Fold 4 demographics-only AUC	0.469	events 89; n 1868	1868	89	Fold-level AUC varied around the null because age and sex carried little signal in this landmark-selected cohort.
+Fold diagnostic	Fold 5 demographics-only AUC	0.503	events 89; n 1868	1868	89	Fold-level AUC varied around the null because age and sex carried little signal in this landmark-selected cohort.
+Age-band outcome gradient	Documented delirium rate, age 65-69	3.9%		2091	81	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.
+Age-band outcome gradient	Documented delirium rate, age 70-74	5.0%		1924	96	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.
+Age-band outcome gradient	Documented delirium rate, age 75-79	5.8%		1898	111	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.
+Age-band outcome gradient	Documented delirium rate, age 80-84	4.3%		1659	71	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.
+Age-band outcome gradient	Documented delirium rate, age 85-89	4.6%		1097	51	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.
+Age-band outcome gradient	Documented delirium rate, age 90+	5.2%		674	35	Age-band event rates were not monotonic after 48-hour landmark selection and exclusion of pre-landmark documented delirium.

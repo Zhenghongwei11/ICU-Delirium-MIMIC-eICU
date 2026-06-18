@@ -1,0 +1,12 @@
+Evidence domain	Analysis	Estimate (95% CI)	N/events	Interpretation
+Primary association	High-intensity phenotype, clinical covariate-extended model	OR 1.74 (1.31-2.30)	9,340/445	Association persisted after demographic, care-process, diagnosis, medication, admission, and unit adjustment.
+Care-process adjustment	High-intensity phenotype, care-intensity-adjusted model	OR 1.41 (1.11-1.79)	9,340/445	The estimate attenuated but remained above the null after total event burden and night fraction adjustment.
+Comparator exposure	Total event burden, clinical covariate-extended model	OR per SD 1.56 (1.38-1.76)	9,340/445	Overall documentation and care-process burden remained independently associated with documented delirium.
+Comparator exposure	Night-event fraction, clinical covariate-extended model	OR per SD 0.97 (0.86-1.08)	9,340/445	Night-specific fraction was not independently associated after adjustment.
+Severity sensitivity	High-intensity phenotype, clinical model plus bedside-acuity markers	OR 1.42 (1.05-1.92)	9,340/445	The estimate attenuated but remained above the null after adding deep-sedation/minimum-RASS and medication-infusion burden.
+Severity sensitivity	High-intensity phenotype, composite bedside-acuity proxy model	OR 1.12 (0.88-1.44)	9,340/445	The estimate was attenuated to the null when a broad composite acuity proxy was substituted for individual clinical markers.
+Ascertainment sensitivity	Restricted to patients with any post-landmark delirium/orientation assessment	OR 2.00 (1.43-2.79)	4,019/445	The association persisted among patients with observable assessment opportunities.
+Ascertainment sensitivity	Adjustment for post-landmark assessment count	OR 2.05 (1.50-2.82)	9,340/445	The estimate persisted after adjustment for documented assessment intensity.
+Ascertainment sensitivity	Inverse-probability weighting among assessed patients	OR 1.89 (1.35-2.66)	4,019/445	The weighted assessed-patient analysis supported the same direction of association.
+Internal screening performance	Nursing documentation model	AUC 0.755 (0.734-0.776)	9,343/445	Repeated nursing documentation showed moderate internal discrimination.
+Internal screening performance	Nursing plus care-process model	AUC 0.757 (0.736-0.776)	9,343/445	The combined nursing and care-process model performed similarly to the nursing documentation model.

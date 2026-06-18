@@ -1,0 +1,3 @@
+dataset_id	dataset_name	version	source_url	role	required_files	access_and_redistribution
+MIMIC-IV	Medical Information Mart for Intensive Care IV	2.2	https://physionet.org/content/mimiciv/2.2/	Primary derivation dataset	hosp/patients.csv.gz; hosp/admissions.csv.gz; hosp/diagnoses_icd.csv.gz; icu/icustays.csv.gz; icu/d_items.csv.gz; icu/chartevents.csv.gz; icu/inputevents.csv.gz	Requires credentialed PhysioNet access and DUA; raw data are not redistributed.
+eICU-CRD	eICU Collaborative Research Database	2.0	https://physionet.org/content/eicu-crd/2.0/	Partial nursing-construct mapping	patient.csv.gz; nurseAssessment.csv.gz; nurseCare.csv.gz; nurseCharting.csv.gz	Requires credentialed PhysioNet access and DUA; raw data are not redistributed.

@@ -1,0 +1,11 @@
+phenotype_display	dataset_id	n	incident_delirium_events	incident_delirium_rate	post_landmark_positive_assessments_or_status	median_post_landmark_negative_assessments	p25_post_landmark_negative_assessments	p75_post_landmark_negative_assessments	any_post_landmark_assessment	any_post_landmark_assessment_rate	no_post_landmark_assessment	no_post_landmark_assessment_rate	mean_post_landmark_negative_assessments	summary_level	outcome_event_status	assessment_status
+High nursing documentation and care-process intensity	MIMIC-IV-2.2	4676	311	0.0665098374679213	311	0.0	0.0	1.0	1770	0.3785286569717707	2906	0.6214713430282293	0.6484174508126604	phenotype		
+Lower nursing documentation and care-process intensity	MIMIC-IV-2.2	4667	134	0.0287122348403685	134	0.0	0.0	2.0	2249	0.4818941504178273	2418	0.5181058495821727	0.905721019927148	phenotype		
+High nursing documentation and care-process intensity	MIMIC-IV-2.2	311	311	1.0	311	0.0	0.0	1.0	311	1.0	0	0.0	0.7556270096463023	phenotype_by_outcome	incident_delirium	
+High nursing documentation and care-process intensity	MIMIC-IV-2.2	4365	0	0.0	0	0.0	0.0	1.0	1459	0.3342497136311569	2906	0.665750286368843	0.6407789232531501	phenotype_by_outcome	no_documented_incident_delirium	
+Lower nursing documentation and care-process intensity	MIMIC-IV-2.2	134	134	1.0	134	1.0	0.0	2.0	134	1.0	0	0.0	1.1567164179104477	phenotype_by_outcome	incident_delirium	
+Lower nursing documentation and care-process intensity	MIMIC-IV-2.2	4533	0	0.0	0	0.0	0.0	2.0	2115	0.4665784248841826	2418	0.5334215751158173	0.8983013456871829	phenotype_by_outcome	no_documented_incident_delirium	
+High nursing documentation and care-process intensity	MIMIC-IV-2.2	1770	311	0.1757062146892655	311	2.0	1.0	2.0	1770	1.0	0	0.0	1.7129943502824858	phenotype_by_assessment_status		any_post_landmark_assessment
+High nursing documentation and care-process intensity	MIMIC-IV-2.2	2906	0	0.0	0	0.0	0.0	0.0	0	0.0	2906	1.0	0.0	phenotype_by_assessment_status		no_post_landmark_assessment
+Lower nursing documentation and care-process intensity	MIMIC-IV-2.2	2249	134	0.0595820364606491	134	2.0	1.0	2.0	2249	1.0	0	0.0	1.879502000889284	phenotype_by_assessment_status		any_post_landmark_assessment
+Lower nursing documentation and care-process intensity	MIMIC-IV-2.2	2418	0	0.0	0	0.0	0.0	0.0	0	0.0	2418	1.0	0.0	phenotype_by_assessment_status		no_post_landmark_assessment

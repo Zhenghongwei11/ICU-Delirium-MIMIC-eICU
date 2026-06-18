@@ -1,0 +1,4 @@
+dataset_id	analysis	outcome	model_type	effect_type	effect	ci_lower	ci_upper	pvalue	n	events	covariate_set
+MIMIC-IV-2.2	primary_all_patients	incident_post_landmark_delirium	logistic	odds_ratio	1.4072722017325596	1.1088177968237989	1.7860599418967584	0.004963714443685213	9340	445	high_intensity_class,age_z,male,total_event_z,night_fraction_z
+MIMIC-IV-2.2	exclude_post_landmark_death	incident_post_landmark_delirium	logistic	odds_ratio	1.6266435922014844	1.235405037933107	2.1417828929020604	0.0005281826252560372	8103	349	high_intensity_class,age_z,male,total_event_z,night_fraction_z
+MIMIC-IV-2.2	composite_death_or_delirium	death_or_delirium	logistic	odds_ratio	1.2140478353230537	1.064951810322922	1.384017691848106	0.003715919845030542	9340	1586	high_intensity_class,age_z,male,total_event_z,night_fraction_z

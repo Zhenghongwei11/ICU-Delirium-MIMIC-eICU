@@ -1,0 +1,4 @@
+dataset_id	analysis	outcome	model_type	effect_type	effect	ci_lower	ci_upper	pvalue	n	events	covariate_set
+MIMIC-IV-2.2	secondary_hospital_mortality	hospital_expire_flag	logistic	odds_ratio	1.1233804924063284	0.9748349645285865	1.2945614146383833	0.10788259755665278	9340	1277.0	high_intensity_class,age_z,male,total_event_z,night_fraction_z
+MIMIC-IV-2.2	secondary_icu_los	log_icu_los_days	linear_ols	mean_difference_on_log1p_scale	0.034913289366393555	0.010780422349813665	0.05904615638297345	0.004584466653015844	9340		high_intensity_class,age_z,male,total_event_z,night_fraction_z
+MIMIC-IV-2.2	secondary_hospital_los	log_hospital_los_days	linear_ols	mean_difference_on_log1p_scale	0.008573179070833065	-0.01891352692103426	0.036059885062700386	0.5409964309598669	9340		high_intensity_class,age_z,male,total_event_z,night_fraction_z

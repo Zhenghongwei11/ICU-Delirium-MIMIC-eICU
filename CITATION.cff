@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: ICU Delirium Nursing Documentation Phenotypes
+message: Please cite the archived release for the exact version used.
+type: software
+authors:
+  - family-names: Zheng
+    given-names: Hongwei
+  - family-names: Jia
+    given-names: Dongfang
+  - family-names: Zhang
+    given-names: Yuezhen
+repository-code: https://github.com/Zhenghongwei11/ICU-Delirium-MIMIC-eICU
+license: MIT

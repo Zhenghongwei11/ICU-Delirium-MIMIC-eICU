@@ -1,0 +1,10 @@
+dataset_id	outcome	model	aic	n	events	source
+MIMIC-IV-2.2	incident_post_landmark_delirium	joint_density_screen	3202.6964686995857	9340	445	logistic_baseline
+MIMIC-IV-2.2	incident_post_landmark_delirium	nursing_vulnerability_density	3207.2438667853057	9343	445	logistic_baseline
+MIMIC-IV-2.2	incident_post_landmark_delirium	dynamic_phenotype_care_intensity_adjusted	3427.184660459596	9340	445	phenotype_outcome
+MIMIC-IV-2.2	incident_post_landmark_delirium	care_intensity_total	3431.277381177309	9343	445	logistic_baseline
+MIMIC-IV-2.2	incident_post_landmark_delirium	day_vs_night_counts	3432.8714116496776	9343	445	logistic_baseline
+MIMIC-IV-2.2	incident_post_landmark_delirium	night_fraction	3433.233729767038	9340	445	logistic_baseline
+MIMIC-IV-2.2	incident_post_landmark_delirium	dynamic_phenotype_unadjusted	3506.34410475409	9343	445	phenotype_outcome
+MIMIC-IV-2.2	incident_post_landmark_delirium	dynamic_phenotype_demographic_adjusted	3508.498012422013	9343	445	phenotype_outcome
+MIMIC-IV-2.2	incident_post_landmark_delirium	demographic_baseline	3583.230206651723	9343	445	logistic_baseline

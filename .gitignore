@@ -1,0 +1,23 @@
+# Raw protected data and credentials
+data/raw/
+.secrets/
+*.netrc
+gittoken
+*.pem
+*.key
+
+# Local patient-level intermediates generated during full reproduction
+results/cohort/mimic_analysis_cohort.tsv
+results/cohort/landmark_eligibility.tsv
+results/cohort/cohort_flow.tsv
+results/cohort/mimic_delirium_landmark_status.tsv
+results/exposure_windows/
+results/covariates/
+results/phenotypes/mimic_feature_matrix_*.tsv
+results/phenotypes/trajectory_classes.tsv
+
+# Local caches and system files
+__pycache__/
+*.pyc
+.DS_Store
+.venv/

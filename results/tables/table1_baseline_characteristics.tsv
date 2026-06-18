@@ -1,0 +1,10 @@
+variable	High documentation/care-process intensity	Lower documentation/care-process intensity
+Age, years	76.0 [70.0, 82.0]	77.0 [70.0, 83.0]
+Male sex	2649 (56.7%)	2382 (51.0%)
+Dementia diagnosis	194 (4.1%)	160 (3.4%)
+Sepsis diagnosis	737 (15.8%)	728 (15.6%)
+Sedative exposure, 0-48h	3867 (82.7%)	738 (15.8%)
+Opioid exposure, 0-48h	3700 (79.1%)	1556 (33.3%)
+Vasopressor exposure, 0-48h	2929 (62.6%)	1261 (27.0%)
+Incident post-landmark delirium	311 (6.7%)	134 (2.9%)
+ICU length of stay, days	4.0 [2.7, 6.8]	3.2 [2.5, 4.8]

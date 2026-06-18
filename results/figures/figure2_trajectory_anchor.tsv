@@ -1,0 +1,3 @@
+dataset_id	assigned_class	class_label	n	incident_delirium_events	incident_delirium_rate	all_total_count_24h	all_total_count_48h	all_night_fraction_48h	rass_sedation_records_48h	restraints_records_48h	skin_braden_pressure_records_48h
+MIMIC-IV-2.2	0	high care intensity; sedation-restraint dense; skin-risk documentation dense; higher night fraction	4676	311	0.0665098374679213	550.9313515825492	1004.9516680923866	0.3158150431123894	15.246150556030795	67.47733105218136	69.47946963216424
+MIMIC-IV-2.2	1	low care intensity	4667	134	0.028712234840368545	413.6983072637669	766.4401114206128	0.3096468616950535	14.314977501607029	0.0	59.32290550674952

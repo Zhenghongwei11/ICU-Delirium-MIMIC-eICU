@@ -1,0 +1,4 @@
+dataset_id	landmark_hours	outcome_or_status	n	denominator
+MIMIC-IV-2.2	24	pre_landmark_delirium_positive	3308	21147
+MIMIC-IV-2.2	24	post_landmark_delirium_positive	3215	21147
+MIMIC-IV-2.2	24	incident_post_landmark_delirium	1497	21147

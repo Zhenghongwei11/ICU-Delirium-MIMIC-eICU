@@ -1,0 +1,2 @@
+dataset_id	reference_k	reference_n_init	reference_aic	reference_bic	reference_mean_max_posterior	n_seed_runs	median_adjusted_rand_vs_reference	min_adjusted_rand_vs_reference	median_high_intensity_jaccard_vs_reference	min_high_intensity_jaccard_vs_reference	median_high_intensity_n	min_high_intensity_n	max_high_intensity_n	selected_k_2_fraction
+MIMIC-IV-2.2	2	100	595596.4627478467	596517.8301134111	0.9999999521866411	20	1.0	1.0	1.0	1.0	4676.0	4676	4676	1.0
